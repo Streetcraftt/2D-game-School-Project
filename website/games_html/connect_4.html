@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="connect_4_style.css">
+</head>
+<body>
+    <div class="card" data-state="#about">
+        <div class="card-header">
+        <div class="card-cover" style="background-image: url('https://t3.ftcdn.net/jpg/04/89/21/50/360_F_489215004_9VeZIQslLZkMdqgiXAOiQCPqG9rQiYMV.jpg')">
+        </div>
+        <img class="card-avatar" src="../screen/connect.jpeg" alt="avatar" />
+        <h1 class="card-fullname">Connect_4</h1>
+        <h2 class="card-jobtitle">Zsolt</h2>
+        </div>
+        <div class="card-main">
+        <div class="card-section is-active" id="about">
+        <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Win your friend or PC with connecting 4 bubbles!
+        </p>
+        <img src="../screen/logo.png" alt="" class="card-avatar_logo">
+        </div>
+        </div>
+        <div class="card-section" id="experience">
+        <div class="card-content">
+        <div class="card-subtitle">Configuration</div>
+        <div class="card-timeline">
+        <div class="card-item" point="1st">
+        <div class="card-item-title">Red Bubbles</div>
+        <div class="card-item-desc">Put 4 of them horizontally to win;<br>Put 4 of them vertically to win;<br>Put 4 of them diagonally to win;<br>Be aware of Blue bubbles</div>
+        </div>
+        <div class="card-item" point="2nd">
+        <div class="card-item-title">Blue Bubbles</div>
+        <div class="card-item-desc">Put 4 of them horizontally to win;<br>Put 4 of them vertically to win;<br>Put 4 of them diagonally to win;<br>Be aware of Red bubbles</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="card-section" id="contact">
+        <div class="card-content">
+        <div class="card-subtitle">Video</div>
+        <div class="card-contact-wrapper">
+            <video width="300" height="130" controls>
+                <source src="../video/bubbles.mp4" type="video/mp4">
+            </video>
+            <a href="../games/Connect4/index.html" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                PLAY
+            </a>
+            <!-- <a href="../games/cosmo_strike/index.html" target="_blank">
+                <button class="contact-me">PLAY</button>
+            </a> -->
+        
+        </div>
+        </div>
+        </div>
+        <div class="card-buttons">
+        <button data-section="#about" class="is-active">ABOUT</button>
+        <button data-section="#experience">CONTROL</button>
+        <button data-section="#contact">PLAY</button>
+        </div>
+        </div>
+        </div>
+        
+        <script src="games_script.js"></script>
+</body>
+</html>

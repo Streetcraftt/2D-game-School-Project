@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="chess_style.css">
+</head>
+<body>
+    <div class="card" data-state="#about">
+        <div class="card-header">
+        <div class="card-cover" style="background-image: url('https://images.chesscomfiles.com/uploads/v1/article/27319.746c2259.668x375o.c6cf8543e2d5@2x.png')">
+        </div>
+        <img class="card-avatar" src="../screen/chess.png" alt="avatar" />
+        <h1 class="card-fullname">Chess</h1>
+        <h2 class="card-jobtitle">Juraj</h2>
+        </div>
+        <div class="card-main">
+        <div class="card-section is-active" id="about">
+        <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Try to Win an actual AI in Chess, Good Luck!
+        </p>
+        <img src="../screen/logo.png" alt="" class="card-avatar_logo">
+        </div>
+        </div>
+        <div class="card-section" id="experience">
+        <div class="card-content">
+        <div class="card-subtitle">Configuration</div>
+        <div class="card-timeline">
+        <div class="card-item" point="1st">
+        <div class="card-item-title">Win strategy</div>
+        <div class="card-item-desc">Choose your side;<br>Make your opponent to loose a queen;<br>Mate opponent's king!</div>
+        </div>
+        <div class="card-item" point="2nd">
+        <div class="card-item-title">Figures</div>
+        <div class="card-item-desc">Bishop = 3;<br>Knight = 3!;<br>Rook = 5!;<br>Queen = 9!;<br>King = ∞!</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="card-section" id="contact">
+        <div class="card-content">
+        <div class="card-subtitle">Video</div>
+        <div class="card-contact-wrapper">
+            <video width="300" height="130" controls>
+                <source src="../video/chess.mp4" type="video/mp4">
+            </video>
+            <a href="../games/chess/index.html" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                PLAY
+            </a>
+            <!-- <a href="../games/cosmo_strike/index.html" target="_blank">
+                <button class="contact-me">PLAY</button>
+            </a> -->
+        
+        </div>
+        </div>
+        </div>
+        <div class="card-buttons">
+        <button data-section="#about" class="is-active">ABOUT</button>
+        <button data-section="#experience">CONTROL</button>
+        <button data-section="#contact">PLAY</button>
+        </div>
+        </div>
+        </div>
+        
+        <script src="games_script.js"></script>
+</body>
+</html>

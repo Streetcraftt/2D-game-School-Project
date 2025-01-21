@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="infinity_style.css">
+</head>
+<body>
+    <div class="card" data-state="#about">
+        <div class="card-header">
+        <div class="card-cover" style="background-image: url('https://t3.ftcdn.net/jpg/02/92/34/74/360_F_292347480_AY6SIg9jO9Nw3uFOrU4RrVFXEAY4qMIq.jpg')">
+        </div>
+        <img class="card-avatar" src="https://m.media-amazon.com/images/I/51qh8HCmUEL.png" alt="avatar" />
+        <h1 class="card-fullname">Infinity ∞</h1>
+        <h2 class="card-jobtitle">Zsolt</h2>
+        </div>
+        <div class="card-main">
+        <div class="card-section is-active" id="about">
+        <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Use your arrows to set the highest number, ever existed!
+        </p>
+        <img src="../screen/logo.png" alt="" class="card-avatar_logo">
+        </div>
+        </div>
+        <div class="card-section" id="experience">
+        <div class="card-content">
+        <div class="card-subtitle">Configuration</div>
+        <div class="card-timeline">
+        <div class="card-item" point="1st">
+        <div class="card-item-title">Highest number</div>
+        <div class="card-item-desc">The main goal of the game is to create the highest number by adding two similar block numbers</div>
+        </div>
+        <div class="card-item" point="2nd">
+        <div class="card-item-title">Arrows</div>
+        <div class="card-item-desc">"arrow left" - Swipe all bricks to the left side;<br>"arrow right" - Swipe all bricks to the right side;<br>"arrow up" - Swipe all bricks to the top;<br>"arrow down" - Swipe all bricks to the bottom</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="card-section" id="contact">
+        <div class="card-content">
+        <div class="card-subtitle">Video</div>
+        <div class="card-contact-wrapper">
+            <video width="300" height="130" controls>
+                <source src="../video/2048.mp4" type="video/mp4">
+            </video>
+            <a href="../games/2048/index.html" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                PLAY
+            </a>
+            <!-- <a href="../games/cosmo_strike/index.html" target="_blank">
+                <button class="contact-me">PLAY</button>
+            </a> -->
+        
+        </div>
+        </div>
+        </div>
+        <div class="card-buttons">
+        <button data-section="#about" class="is-active">ABOUT</button>
+        <button data-section="#experience">CONTROL</button>
+        <button data-section="#contact">PLAY</button>
+        </div>
+        </div>
+        </div>
+        
+        <script src="games_script.js"></script>
+</body>
+</html>

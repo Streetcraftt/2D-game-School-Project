@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="game_style_tic.css">
+</head>
+<body>
+    <div class="card" data-state="#about">
+        <div class="card-header">
+        <div class="card-cover" style="background-image: url('https://media.istockphoto.com/id/1369512988/vector/glowing-neon-line-tic-tac-toe-game-icon-isolated-on-black-background-colorful-outline.jpg?s=612x612&w=0&k=20&c=ApnnzbwsLI0L6CN-vk-b5Emo25czQyQMil-3B5of2vc=')">
+        </div>
+        <img class="card-avatar" src="https://www.shutterstock.com/shutterstock/videos/1068455087/thumb/7.jpg?ip=x480" alt="avatar" />
+        <h1 class="card-fullname">Tic Tac Toe</h1>
+        <h2 class="card-jobtitle">Bruce</h2>
+        </div>
+        <div class="card-main">
+        <div class="card-section is-active" id="about">
+        <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Play against your friends and win with x and o to prove your strength!
+        </p>
+        <img src="../screen/logo.png" alt="" class="card-avatar_logo">
+        </div>
+        </div>
+        <div class="card-section" id="experience">
+        <div class="card-content">
+        <div class="card-subtitle">Configuration</div>
+        <div class="card-timeline">
+        <div class="card-item" point="1st">
+        <div class="card-item-title">X</div>
+        <div class="card-item-desc">Put 3 of them horizontally to win;<br>Put 3 of them vertically to win;<br>Put 3 of them diagonally to win;<br>Be aware of O</div>
+        </div>
+        <div class="card-item" point="2nd">
+        <div class="card-item-title">O</div>
+        <div class="card-item-desc">Put 3 of them horizontally to win;<br>Put 3 of them vertically to win;<br>Put 3 of them diagonally to win;<br>Be aware of X</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="card-section" id="contact">
+        <div class="card-content">
+        <div class="card-subtitle">Video</div>
+        <div class="card-contact-wrapper">
+            <video width="300" height="130" controls>
+                <source src="../video/tic.mp4" type="video/mp4">
+            </video>
+            <a href="../games/tic-tac-toe game/index.html" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                PLAY
+            </a>
+            <!-- <a href="../games/cosmo_strike/index.html" target="_blank">
+                <button class="contact-me">PLAY</button>
+            </a> -->
+        
+        </div>
+        </div>
+        </div>
+        <div class="card-buttons">
+        <button data-section="#about" class="is-active">ABOUT</button>
+        <button data-section="#experience">CONTROL</button>
+        <button data-section="#contact">PLAY</button>
+        </div>
+        </div>
+        </div>
+        
+        <script src="games_script.js"></script>
+</body>
+</html>

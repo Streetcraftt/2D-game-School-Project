@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    #minesweeper-board {
+      margin-top: 20px;
+      display: grid;
+      grid-gap: 1px;
+    }
+
+    .cell {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+      text-align: center;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .hidden {
+      background-color: #ddd;
+    }
+
+    .revealed {
+      background-color: #eee;
+      cursor: default;
+    }
+
+    .mine {
+      background-color: #f00;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lite Minesweeper</h1>
+
+  <label for="difficulty">Select Difficulty:</label>
+  <select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="hard">Hard</option>
+    <option value="super-duper-hard">Super Duper Hard</option>
+  </select>
+
+  <div id="minesweeper-board"></div>
+
+  <button class="button" onclick="generateNewGame()">New Game</button>
+
+  <script>
+    const difficultySettings = {
+      easy: { rows: 8, cols: 8, mines: 10 },
+      medium: { rows: 10, cols: 10, mines: 20 },
+      intermediate: { rows: 13, cols: 13, mines: 40 },
+      hard: { rows: 16, cols: 16, mines: 60 },
+      'super-duper-hard': { rows: 21, cols: 21, mines: 100 }
+    };
+
+    let minefield = [];
+    let rows, cols, mines;
+
+    function generateNewGame() {
+      const difficulty = document.getElementById('difficulty').value;
+      const difficultySettingsForLevel = difficultySettings[difficulty];
+      rows = difficultySettingsForLevel.rows;
+      cols = difficultySettingsForLevel.cols;
+      mines = difficultySettingsForLevel.mines;
+
+      minefield = generateMinefield(rows, cols, mines);
+      renderBoard();
+    }
+
+    function generateMinefield(rows, cols, mines) {
+      const minefield = Array.from({ length: rows }, () => Array(cols).fill(0));
+
+      for (let i = 0; i < mines; i++) {
+        let row, col;
+        do {
+          row = getRandomInt(rows);
+          col = getRandomInt(cols);
+        } while (minefield[row][col] === 'mine');
+
+        minefield[row][col] = 'mine';
+      }
+
+      return minefield;
+    }
+
+    function renderBoard() {
+      const minesweeperBoard = document.getElementById('minesweeper-board');
+      minesweeperBoard.innerHTML = '';
+      minesweeperBoard.style.gridTemplateColumns = `repeat(${cols}, 30px)`;
+
+      for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+          const cell = document.createElement('div');
+          cell.className = 'cell hidden';
+          cell.dataset.row = i;
+          cell.dataset.col = j;
+          cell.onclick = () => revealCell(i, j);
+          minesweeperBoard.appendChild(cell);
+        }
+      }
+    }
+
+    function revealCell(row, col) {
+      const cell = document.querySelector(`[data-row='${row}'][data-col='${col}']`);
+      if (!cell || cell.classList.contains('revealed')) {
+        return;
+      }
+
+      cell.classList.remove('hidden');
+      cell.classList.add('revealed');
+
+      if (minefield[row][col] === 'mine') {
+        cell.classList.add('mine');
+        revealAllMines();
+        alert('Game Over! You hit a mine.');
+        generateNewGame();
+      } else {
+        const adjacentMines = countAdjacentMines(row, col);
+        if (adjacentMines > 0) {
+          cell.textContent = adjacentMines;
+        } else {
+          // If no adjacent mines, recursively reveal neighboring cells
+          revealNeighbors(row, col);
+        }
+      }
+    }
+
+    function revealAllMines() {
+      const mineCells = document.querySelectorAll('.mine');
+      mineCells.forEach(mineCell => {
+        mineCell.textContent = '💣'; // Unicode Bomb character
+      });
+    }
+
+    function countAdjacentMines(row, col) {
+      let count = 0;
+
+      for (let i = Math.max(0, row - 1); i <= Math.min(rows - 1, row + 1); i++) {
+        for (let j = Math.max(0, col - 1); j <= Math.min(cols - 1, col + 1); j++) {
+          if (minefield[i][j] === 'mine') {
+            count++;
+          }
+        }
+      }
+
+      return count;
+    }
+
+    function revealNeighbors(row, col) {
+      for (let i = Math.max(0, row - 1); i <= Math.min(rows - 1, row + 1); i++) {
+        for (let j = Math.max(0, col - 1); j <= Math.min(cols - 1, col + 1); j++) {
+          revealCell(i, j);
+        }
+      }
+    }
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    // Initial game generation
+    generateNewGame();
+  </script>
+</body>
+</html>

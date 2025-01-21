@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="bouncy_style.css">
+</head>
+<body>
+    <div class="card" data-state="#about">
+        <div class="card-header">
+        <div class="card-cover" style="background-image: url('https://media.istockphoto.com/id/846359388/photo/ball-pool.jpg?s=612x612&w=0&k=20&c=S-37oAjdw10q2Jmxa9OktoYZ-fW1GQPO2SSLuocXMXI=')">
+        </div>
+        <img class="card-avatar" src="../screen/bouncer.png" alt="avatar" />
+        <h1 class="card-fullname">Bouncy</h1>
+        <h2 class="card-jobtitle">Juraj</h2>
+        </div>
+        <div class="card-main">
+        <div class="card-section is-active" id="about">
+        <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Roll the Bouncy Ball to its destination!
+        </p>
+        <img src="../screen/logo.png" alt="" class="card-avatar_logo">
+        </div>
+        </div>
+        <div class="card-section" id="experience">
+        <div class="card-content">
+        <div class="card-subtitle">Configuration</div>
+        <div class="card-timeline">
+        <div class="card-item" point="1st">
+        <div class="card-item-title">Orange Bouncy Ball</div>
+        <div class="card-item-desc">Use arrow keys:<br>"arrow up" - to jump up, "arrow down" - to go down;<br>"arrow right" - to move right, "arrow left" - to move left</div>
+        </div>
+        <div class="card-item" point="2nd">
+        <div class="card-item-title">Obstacles</div>
+        <div class="card-item-desc">Red lava = instant GameOver;<br>Small Pound = You can dive!;<br>Turquoise Block = opens hidden path!;<br>Gold Block = Congrats, you won!</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="card-section" id="contact">
+        <div class="card-content">
+        <div class="card-subtitle">Video</div>
+        <div class="card-contact-wrapper">
+            <video width="300" height="130" controls>
+                <source src="../video/ball.mp4" type="video/mp4">
+            </video>
+            <a href="../games/bouncy/index.html" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                PLAY
+            </a>
+            <!-- <a href="../games/cosmo_strike/index.html" target="_blank">
+                <button class="contact-me">PLAY</button>
+            </a> -->
+        
+        </div>
+        </div>
+        </div>
+        <div class="card-buttons">
+        <button data-section="#about" class="is-active">ABOUT</button>
+        <button data-section="#experience">CONTROL</button>
+        <button data-section="#contact">PLAY</button>
+        </div>
+        </div>
+        </div>
+        
+        <script src="games_script.js"></script>
+</body>
+</html>

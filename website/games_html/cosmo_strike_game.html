@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="games_style.css">
+</head>
+<body>
+    <div class="card" data-state="#about">
+        <div class="card-header">
+        <div class="card-cover" style="background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2013/09/07/144257/f188c7782ffacb5ca0b7246d7ab898f6.jpg')">
+        </div>
+        <img class="card-avatar" src="https://cdn.dribbble.com/userupload/6744031/file/original-d8a18f253177ea8d2ba9786addd9bf30.png?resize=400x300" alt="avatar" />
+        <h1 class="card-fullname">Cosmo Strike</h1>
+        <h2 class="card-jobtitle">Amir</h2>
+        </div>
+        <div class="card-main">
+        <div class="card-section is-active" id="about">
+        <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Control your spaceship and take down your enemy! Be aware of asteroids!
+        </p>
+        <img src="../screen/logo.png" alt="" class="card-avatar_logo">
+        </div>
+        </div>
+        <div class="card-section" id="experience">
+        <div class="card-content">
+        <div class="card-subtitle">Configuration</div>
+        <div class="card-timeline">
+        <div class="card-item" point="1st">
+        <div class="card-item-title">Red Rocket</div>
+        <div class="card-item-desc">"arrow left" - Spin Counterclockwise;<br>"arrow right" - Spin Clockwise;<br>"arrow up" - Fly forward;<br>"space" - shoot</div>
+        </div>
+        <div class="card-item" point="2nd">
+        <div class="card-item-title">Blue Rocket</div>
+        <div class="card-item-desc">"A" - Spin Counterclockwise;<br>"D" - Spin Clockwise;<br>"W" - Fly forward;<br>"Z" - shoot</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="card-section" id="contact">
+        <div class="card-content">
+        <div class="card-subtitle">Video</div>
+        <div class="card-contact-wrapper">
+            <video width="300" height="130" controls>
+                <source src="../video/cosmo.mp4" type="video/mp4">
+            </video>
+            <a href="../games/cosmo_strike/index.html" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                PLAY
+            </a>
+            <!-- <a href="../games/cosmo_strike/index.html" target="_blank">
+                <button class="contact-me">PLAY</button>
+            </a> -->
+        
+        </div>
+        </div>
+        </div>
+        <div class="card-buttons">
+        <button data-section="#about" class="is-active">ABOUT</button>
+        <button data-section="#experience">CONTROL</button>
+        <button data-section="#contact">PLAY</button>
+        </div>
+        </div>
+        </div>
+        
+        <script src="games_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+#game-container {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#board {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    background-color: #BBADA0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tile {
+    width: 70px;
+    height: 70px;
+    background-color: #CDC1B4;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.tile-2 {
+    background-color: #EEE4DA;
+    color: #776E65;
+}
+
+.tile-4 {
+    background-color: #ECE0CA;
+    color: #776E65;
+}
+
+.tile-8 {
+    background-color: #F2B179;
+    color: white;
+}
+
+.tile-16 {
+    background-color: #F59563;
+    color: white;
+}
+
+.tile-32 {
+    background-color: #F67C5F;
+    color: white;
+}
+
+.tile-64 {
+    background-color: #F65E3B;
+    color: white;
+}
+
+.tile-128 {
+    background-color: #EDCF72;
+    color: white;
+}
+
+.tile-256 {
+    background-color: #EDCC61;
+    color: white;
+}
+
+.tile-512 {
+    background-color: #EDC850;
+    color: white;
+}
+
+.tile-1024 {
+    background-color: #EDC53F;
+    color: white;
+}
+
+.tile-2048 {
+    background-color: #EDC22E;
+    color: white;
+}
+
+#game-over {
+    font-size: 30px;
+    font-weight: bold;
+    color: #776E65;
+    margin-top: 20px;
+}
+
+#reset-button {
+    background-color: #8F7A66;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#new-game:hover {
+    background-color: #A39280;
+}

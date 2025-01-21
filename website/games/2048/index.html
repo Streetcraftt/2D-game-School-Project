@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <p id="score">Score: 0</p>
+    <p>How to play:<br>Use your Arrow keys</p>
+    <div>
+        <span>Grid size:</span>
+        <span id="grid-size">0</span>
+        <button onclick="addGridSize()">+</button>
+        <button onclick="subGridSize()">-</button>
+      </div>
+    <div id="game-container">
+        <div id="board"></div>
+        <button id="reset-button">New Game</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

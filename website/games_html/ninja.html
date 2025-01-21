@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="ninja_style.css">
+</head>
+<body>
+    <div class="card" data-state="#about">
+        <div class="card-header">
+        <div class="card-cover" style="background-image: url('https://t4.ftcdn.net/jpg/05/72/92/63/360_F_572926367_ZDHxWtJFB2f9y5L8qazlTybq0qcdNETS.jpg')">
+        </div>
+        <img class="card-avatar" src="../screen/ninja.jpg" alt="avatar" />
+        <h1 class="card-fullname">NINJA_CUBE</h1>
+        <h2 class="card-jobtitle">Amir</h2>
+        </div>
+        <div class="card-main">
+        <div class="card-section is-active" id="about">
+        <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Slash cubes and set the highest score!
+        </p>
+        <img src="../screen/logo.png" alt="" class="card-avatar_logo">
+        </div>
+        </div>
+        <div class="card-section" id="experience">
+        <div class="card-content">
+        <div class="card-subtitle">Configuration</div>
+        <div class="card-timeline">
+        <div class="card-item" point="1st">
+        <div class="card-item-title">Slash</div>
+        <div class="card-item-desc">Hold left mouse button right before the cube to slash it;<br>Better to make the slash long, in order to have enough power to cut the cube;<br>Be aware of special cubes, they need to be slashed several times</div>
+        </div>
+        <div class="card-item" point="2nd">
+        <div class="card-item-title">Cubes</div>
+        <div class="card-item-desc">Ordinary cubes do not light and can be easily slashed;<br>Time slowing cube, cut it and slow the time for several seconds!;<br>Special cubes are lighted;<br>Beat your own high score</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="card-section" id="contact">
+        <div class="card-content">
+        <div class="card-subtitle">Video</div>
+        <div class="card-contact-wrapper">
+            <video width="300" height="130" controls>
+                <source src="../video/nin.mp4" type="video/mp4">
+            </video>
+            <a href="../games/ninja/index.html" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                PLAY
+            </a>
+            <!-- <a href="../games/cosmo_strike/index.html" target="_blank">
+                <button class="contact-me">PLAY</button>
+            </a> -->
+        
+        </div>
+        </div>
+        </div>
+        <div class="card-buttons">
+        <button data-section="#about" class="is-active">ABOUT</button>
+        <button data-section="#experience">CONTROL</button>
+        <button data-section="#contact">PLAY</button>
+        </div>
+        </div>
+        </div>
+        
+        <script src="games_script.js"></script>
+</body>
+</html>
